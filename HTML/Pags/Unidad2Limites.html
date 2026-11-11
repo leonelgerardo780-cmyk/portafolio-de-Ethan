@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unidad 2: Límites</title>
+    <link rel="stylesheet" href="../CSS/MIStilo.css">
+</head>
+<body class="pagina-calculo">
+    <nav class="navegacion-principal" aria-label="Navegación principal">
+        <ul class="navMenu">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="menu.html">Menú</a></li>
+            <li><a href="Pasatiempos.html">Pasatiempos</a></li>
+            <li>
+                <a href="ProyectoCalculo.html">Proyecto de cálculo</a>
+                <ul class="submenu">
+                    <li><a href="Unidad1Funciones.html">Unidad 1: Funciones</a></li>
+                    <li><a href="Unidad2Limites.html">Unidad 2: Límites</a></li>
+                    <li><a href="Unidad3Derivadas.html">Unidad 3: Derivadas</a></li>
+                    <li><a href="Unidad4Integrales.html">Unidad 4: Integrales</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Conozcámonos</a>
+                <ul class="submenu">
+                    <li><a href="Autobiografia.html">Autobiografía</a></li>
+                    <li><a href="Cosmovision.html">Cosmovisión</a></li>
+                    <li><a href="Metas.html">Metas</a></li>
+                    <li><a href="contactame.html">Contacto</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Redes</a>
+                <ul class="submenu">
+                    <li><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+                    <li><a href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer">TikTok</a></li>
+                </ul>
+            </li>
+            <li><a href="AcercaDe.html">Acerca de</a></li>
+        </ul>
+    </nav>
+
+    <main class="calculo-contenido calculo-lectura">
+        <header class="calculo-intro">
+            <h1>Unidad 2. Límites</h1>
+            <p>Los límites describen cómo se comporta una función cuando la variable se acerca a un valor.</p>
+        </header>
+
+        <article class="calculo-seccion">
+            <h2>La idea de acercarse a un valor</h2>
+            <p>
+                Después de aprender a relacionar cantidades por medio de las funciones, los
+                matemáticos empezaron a hacerse otra pregunta: ¿qué pasa con una función cuando
+                la variable se acerca cada vez más a un número? De esa pregunta viene la idea de
+                límite. Aunque desde la antigüedad ya existían algunas ideas parecidas, el concepto
+                se fue desarrollando hasta tener una explicación más precisa.
+            </p>
+            <p>
+                Dos matemáticos importantes para este tema fueron Augustin-Louis Cauchy y
+                Karl Weierstrass. Cauchy fue un matemático francés del siglo XIX. Trabajó con los
+                límites, la continuidad y las derivadas, y ayudó a organizar el análisis matemático.
+                Weierstrass fue un matemático alemán que también hizo aportaciones importantes.
+                Él ayudó a explicar los límites de una manera más rigurosa, para que no dependieran
+                solamente de dibujos o de lo que parecía suceder en una gráfica.
+            </p>
+            <p>
+                Podemos imaginar la idea de límite con una carrera escolar. Ethan y Sofía están
+                cerca de la meta. Al principio a Sofía le faltan 10 metros, después solamente 5,
+                luego 2 y más adelante menos de un metro. La distancia que le falta se va haciendo
+                cada vez más pequeña y se acerca a cero. No necesitamos que llegue exactamente a
+                la meta para entender que se está acercando.
+            </p>
+            <p>
+                En matemáticas se puede escribir, por ejemplo,
+                <span class="calculo-formula">lim<sub>x → 2</sub> f(x) = 5</span>.
+                Esto se lee: el límite de f(x), cuando x tiende a 2, es 5. Quiere decir que cuando
+                x toma valores cada vez más cercanos a 2, los resultados de la función se acercan
+                a 5.
+            </p>
+            <p>
+                Hay algo importante que debemos recordar: el límite no siempre nos dice cuánto
+                vale la función justo en ese punto. Puede pasar que f(2) no esté definida o que
+                tenga otro valor, pero aun así los resultados cercanos a 2 se acerquen a 5. Lo que
+                se estudia es el comportamiento de la función alrededor del punto, no solamente
+                lo que ocurre exactamente en él.
+            </p>
+        </article>
+
+        <article class="calculo-seccion">
+            <h2>Cómo se calculan los límites</h2>
+            <p>
+                Una forma de comenzar a estudiar un límite es revisar una tabla de valores o una
+                gráfica. Así podemos observar qué resultados se van obteniendo cuando la variable
+                se acerca al número que nos interesa. También existe la sustitución directa, que se
+                puede usar cuando la función es continua en ese punto.
+            </p>
+            <p>
+                Por ejemplo, si tenemos f(x) = 2x + 1 y queremos encontrar el límite cuando x se
+                acerca a 3, sustituimos la x por 3. La operación queda 2(3) + 1 = 7. Por lo tanto,
+                el límite es 7. Este tipo de ejercicio es sencillo porque solamente tenemos que
+                reemplazar la variable por el número indicado.
+            </p>
+            <p>
+                Pero no todos los ejercicios salen de esa manera. A veces, al sustituir, aparece
+                una expresión como 0/0. A esto se le llama una forma indeterminada. No significa
+                automáticamente que el límite no exista. En algunos casos necesitamos hacer otros
+                pasos, como factorizar y simplificar la expresión.
+            </p>
+            <p>
+                Un ejemplo es (x² - 4)/(x - 2), cuando x se acerca a 2. Si sustituimos directamente,
+                el numerador y el denominador quedan en cero. Para resolverlo, factorizamos el
+                numerador: x² - 4 = (x - 2)(x + 2). Después podemos simplificar el factor x - 2,
+                siempre que x sea diferente de 2. La expresión queda x + 2. Ahora sí podemos
+                acercar x a 2 y obtenemos 4.
+            </p>
+            <p>
+                También existen los límites laterales. El límite por la izquierda estudia lo que
+                sucede cuando x se acerca al número usando valores menores que él. El límite por
+                la derecha observa lo que sucede usando valores mayores. Para que exista el límite
+                en un punto, los dos límites laterales deben llegar al mismo resultado.
+            </p>
+            <p>
+                Cauchy ayudó a que el análisis matemático tuviera una base más organizada.
+                Después, Weierstrass explicó los límites de una manera más precisa. En cursos más
+                avanzados se utilizan las letras griegas épsilon (ε) y delta (δ) para expresar que
+                podemos hacer que los resultados estén tan cerca del límite como queramos, siempre
+                que la variable esté suficientemente cerca del valor que estamos estudiando.
+            </p>
+        </article>
+
+        <article class="calculo-seccion">
+            <h2>Continuidad, aplicaciones y reflexión</h2>
+            <p>
+                Los límites también sirven para estudiar la continuidad de una función. De manera
+                sencilla, una función es continua en un punto cuando su gráfica no tiene un salto,
+                un hueco o una ruptura en ese lugar. Para que sea continua en un punto, la función
+                debe estar definida ahí, debe existir el límite y ese límite debe ser igual al valor
+                de la función.
+            </p>
+            <p>
+                Por ejemplo, las funciones polinomiales como f(x) = x² son continuas en todos los
+                números reales. En cambio, una función que tiene una división entre cero puede no
+                estar definida en cierto punto. Los límites nos ayudan a estudiar qué sucede cerca
+                de ese lugar y si los valores se acercan a algún número.
+            </p>
+            <p>
+                Los límites se usan en diferentes áreas de las matemáticas y de la ciencia. Son
+                necesarios para definir las derivadas, porque permiten estudiar cómo cambia una
+                función en un instante. También se utilizan para analizar gráficas, movimientos y
+                otros problemas donde importa saber qué pasa cuando una cantidad se acerca a
+                cierto valor.
+            </p>
+            <p>
+                En la historia, Sofía compara los límites con algunas situaciones personales.
+                A veces esperamos que una amistad o una situación cambie de repente, pero muchas
+                cosas van cambiando poco a poco. Ethan piensa que la comparación no es exactamente
+                igual a un límite matemático, pero le ayuda a recordar que acercarse a algo no
+                significa necesariamente haber llegado todavía.
+            </p>
+            <p>
+                <strong>Reflexión personal de la unidad:</strong> Los límites me hicieron pensar
+                que no todo en la vida se resuelve de inmediato. A veces pasamos por momentos
+                difíciles o tenemos dudas y necesitamos tiempo para entender lo que está pasando.
+                También he aprendido que puedo acercarme a Dios poco a poco, con oración y buenas
+                decisiones, aunque no siempre entienda todo desde el principio. Así como en
+                matemáticas observamos lo que pasa cerca de un valor, en la vida también es bueno
+                pensar antes de sacar conclusiones.
+            </p>
+            <p>
+                <strong>Conclusión de la unidad:</strong> En esta unidad aprendí que los límites
+                permiten estudiar el comportamiento de una función cuando la variable se acerca
+                a un punto. También entendí que sirven para analizar la continuidad y que son una
+                base muy importante para aprender cálculo diferencial. Aunque al principio algunos
+                procedimientos parecen complicados, con ejemplos y práctica se pueden comprender
+                mejor.
+            </p>
+        </article>
+
+        <nav class="calculo-paginacion" aria-label="Navegación entre unidades">
+            <a href="Unidad1Funciones.html">Anterior: Funciones</a>
+            <a href="ProyectoCalculo.html">Volver al proyecto</a>
+            <a href="Unidad3Derivadas.html">Siguiente: Derivadas</a>
+        </nav>
+    </main>
+</body>
+</html>

@@ -1,0 +1,594 @@
+:root {
+    --verde-oscuro: #17452e;
+    --verde: #2f7a4d;
+    --verde-claro: #dcebe0;
+    --fondo: #eaf3ec;
+    --borde: #cce5d2;
+    --blanco: #ffffff;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: var(--fondo);
+    color: #333333;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    color: var(--verde-oscuro);
+    font-size: 24px;
+}
+
+/* Navegación compartida */
+.navegacion-principal {
+    width: 100%;
+    margin-bottom: 18px;
+    background: var(--verde-oscuro);
+}
+
+.navMenu,
+.navMenu ul {
+    margin: 0;
+    padding: 6px 12px;
+    list-style: none;
+}
+
+.navMenu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 4px;
+}
+
+.navMenu li {
+    position: relative;
+}
+
+.navMenu a {
+    display: block;
+    padding: 12px 18px;
+    border-radius: 6px;
+    color: var(--blanco);
+    text-decoration: none;
+}
+
+.navMenu a:hover,
+.navMenu a:focus {
+    background: var(--verde);
+}
+
+.navMenu .submenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 2;
+    display: none;
+    min-width: 180px;
+    border: 1px solid #b9d8c0;
+    border-radius: 6px;
+    background: var(--blanco);
+    box-shadow: 0 6px 16px rgba(23, 59, 40, 0.18);
+}
+
+.navMenu li:hover > .submenu,
+.navMenu li:focus-within > .submenu {
+    display: block;
+}
+
+.navMenu .submenu a {
+    padding: 10px 12px;
+    color: var(--verde-oscuro);
+}
+
+.navMenu .submenu a:hover,
+.navMenu .submenu a:focus {
+    background: var(--verde-claro);
+}
+
+/* Encabezado del menú */
+.pagina-menu {
+    min-height: 100vh;
+}
+
+.pagina-menu #header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+    padding: 32px 20px;
+    background: linear-gradient(135deg, var(--verde-claro), #b9d8c0);
+    color: #102b1c;
+    text-align: center;
+}
+
+.pagina-menu #header .encabezado {
+    padding: 0;
+}
+
+.pagina-menu #header img {
+    width: 180px;
+    height: 180px;
+    border: 5px solid var(--blanco);
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 14px rgba(23, 59, 40, 0.2);
+}
+
+.pagina-menu #header h1 {
+    color: var(--verde-oscuro);
+    font-size: 30px;
+}
+
+/* Portada */
+.pagina-inicio {
+    min-height: 100vh;
+}
+
+.inicio-encabezado,
+.inicio-pie {
+    padding: 24px 16px;
+    background: var(--verde-oscuro);
+    color: var(--blanco);
+    text-align: center;
+}
+
+.inicio-encabezado h1 {
+    color: var(--blanco);
+    font-size: 32px;
+}
+
+.inicio-contenido {
+    width: 90%;
+    max-width: 900px;
+    margin: 32px auto;
+}
+
+.portada-intro,
+.portada-pasatiempos {
+    padding: 24px;
+    border-left: 5px solid var(--verde);
+    background: var(--blanco);
+}
+
+.portada-pasatiempos {
+    margin-top: 24px;
+    background: var(--verde-claro);
+}
+
+.portada-intro h2,
+.portada-pasatiempos h2 {
+    color: var(--verde-oscuro);
+}
+
+.pasatiempos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 12px;
+}
+
+.pasatiempo-card {
+    padding: 18px;
+    border-radius: 6px;
+    background: var(--verde-oscuro);
+    color: var(--blanco);
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+}
+
+.pasatiempo-card:hover,
+.pasatiempo-card:focus {
+    background: var(--verde);
+}
+
+.portada-acerca {
+    margin: 24px 0;
+    text-align: center;
+}
+
+.portada-acerca a,
+.pagina-pasatiempos .pasatiempo a,
+.pagina-pasatiempo-detalle main > p a {
+    color: var(--verde-oscuro);
+    font-weight: bold;
+}
+
+/* Páginas de contenido */
+.pagina-evidencia,
+.pagina-pasatiempos,
+.pagina-pasatiempo-detalle,
+.pagina-cosmovision,
+.pagina-metas,
+.pagina-biografia,
+.pagina-contacto {
+    min-height: 100vh;
+}
+
+.pagina-evidencia main,
+.pagina-pasatiempos main,
+.pagina-pasatiempo-detalle main {
+    width: 90%;
+    max-width: 900px;
+    margin: 32px auto;
+    padding: 24px;
+    border-top: 5px solid var(--verde);
+    border-radius: 8px;
+    background: var(--blanco);
+    line-height: 1.6;
+}
+
+.pagina-evidencia h1,
+.pagina-pasatiempos h1,
+.pagina-pasatiempo-detalle h1 {
+    color: var(--verde-oscuro);
+}
+
+/* Cosmovisión y metas */
+.cosmovision-contenido,
+.metas-contenido {
+    width: 90%;
+    max-width: 900px;
+    margin: 32px auto;
+}
+
+.cosmovision-contenido > h1,
+.metas-contenido > h1,
+.metas-intro {
+    text-align: center;
+}
+
+.cosmovision-tarjetas {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.cosmovision-tarjeta,
+.metas-tarjeta {
+    padding: 20px;
+    border: 1px solid var(--borde);
+    border-top: 5px solid var(--verde);
+    border-radius: 8px;
+    background: var(--blanco);
+    line-height: 1.6;
+}
+
+.cosmovision-tarjeta h2,
+.metas-tarjeta h2 {
+    margin-top: 0;
+    color: var(--verde-oscuro);
+}
+
+.cosmovision-principal {
+    grid-column: 1 / -1;
+    padding: 28px;
+    border-top-color: var(--verde-oscuro);
+    background: var(--verde-claro);
+}
+
+.metas-intro {
+    margin: 0 auto 24px;
+    color: var(--verde-oscuro);
+}
+
+.metas-tarjetas {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+}
+
+/* Proyecto de cálculo */
+.pagina-calculo {
+    min-height: 100vh;
+}
+
+.calculo-contenido {
+    width: 90%;
+    max-width: 1000px;
+    margin: 32px auto;
+}
+
+.calculo-intro {
+    margin-bottom: 24px;
+    padding: 24px;
+    border-left: 5px solid var(--verde);
+    border-radius: 6px;
+    background: var(--blanco);
+    line-height: 1.6;
+}
+
+.calculo-intro h1 {
+    margin-top: 0;
+}
+
+.calculo-unidades {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.calculo-unidad {
+    padding: 20px;
+    border: 1px solid var(--borde);
+    border-top: 5px solid var(--verde);
+    border-radius: 8px;
+    background: var(--blanco);
+    line-height: 1.6;
+}
+
+.calculo-unidad h2 {
+    margin-top: 0;
+    color: var(--verde-oscuro);
+}
+
+.calculo-paginas {
+    color: #555555;
+    font-size: 14px;
+}
+
+.calculo-unidad a {
+    display: inline-block;
+    padding: 9px 14px;
+    border-radius: 5px;
+    background: var(--verde-oscuro);
+    color: var(--blanco);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.calculo-unidad a:hover,
+.calculo-unidad a:focus {
+    background: var(--verde);
+}
+
+.calculo-conclusion {
+    margin: 24px 0;
+    text-align: center;
+}
+
+.calculo-conclusion a {
+    color: var(--verde-oscuro);
+    font-weight: bold;
+}
+
+.calculo-lectura > .calculo-intro {
+    margin-bottom: 20px;
+}
+
+.calculo-seccion {
+    margin-bottom: 20px;
+    padding: 22px;
+    border: 1px solid var(--borde);
+    border-left: 5px solid var(--verde);
+    border-radius: 8px;
+    background: var(--blanco);
+    line-height: 1.7;
+}
+
+.calculo-seccion h2 {
+    margin-top: 0;
+    color: var(--verde-oscuro);
+}
+
+.calculo-formula {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 4px;
+    background: var(--verde-claro);
+    color: var(--verde-oscuro);
+    font-weight: bold;
+}
+
+.calculo-paginacion {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 12px;
+    margin: 24px 0;
+}
+
+.calculo-paginacion a {
+    color: var(--verde-oscuro);
+    font-weight: bold;
+}
+
+/* Pasatiempos */
+.pasatiempos-lista {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.pasatiempo {
+    display: grid;
+    align-content: start;
+    gap: 12px;
+    padding: 18px;
+    border: 1px solid var(--borde);
+    border-top: 5px solid var(--verde);
+    border-radius: 8px;
+    background: var(--blanco);
+    box-shadow: 0 4px 12px rgba(23, 59, 40, 0.1);
+}
+
+.pasatiempo h2 {
+    margin-top: 0;
+    color: var(--verde-oscuro);
+}
+
+.espacio-imagen {
+    display: block;
+    width: 100%;
+    height: 260px;
+    margin: 24px 0;
+    border-radius: 6px;
+    object-fit: cover;
+}
+
+/* Contacto */
+.pagina-contacto {
+    padding-bottom: 32px;
+}
+
+#formStlo {
+    width: 90%;
+    max-width: 600px;
+    margin: 32px auto;
+    padding: 24px;
+    border-top: 5px solid var(--verde);
+    border-radius: 8px;
+    background: var(--blanco);
+    box-shadow: 0 4px 14px rgba(23, 59, 40, 0.12);
+}
+
+#formStlo h1 {
+    margin-top: 0;
+    color: var(--verde-oscuro);
+}
+
+#formStlo form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+#formStlo input,
+#formStlo select,
+#formStlo textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #a9c5af;
+    border-radius: 5px;
+    font: inherit;
+}
+
+#formStlo textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+#formStlo button {
+    width: 100%;
+    margin-top: 15px;
+    padding: 10px;
+    border: 0;
+    border-radius: 5px;
+    background: var(--verde);
+    color: var(--blanco);
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#formStlo button:hover {
+    background: var(--verde-oscuro);
+}
+
+/* Biografía */
+#mi-biografia {
+    width: 90%;
+    max-width: 900px;
+    margin: 24px auto;
+    padding: 20px;
+    border: 2px solid #3f7652;
+    border-radius: 8px;
+    background: var(--fondo);
+}
+
+#mi-biografia header,
+#mi-biografia footer {
+    padding: 15px;
+    background: #3f7652;
+    color: var(--blanco);
+    text-align: center;
+}
+
+#mi-biografia header h1,
+#mi-biografia header h2 {
+    color: var(--blanco);
+}
+
+#mi-biografia .foto-perfil {
+    margin: 20px;
+    text-align: center;
+}
+
+#mi-biografia .foto-perfil img {
+    width: 200px;
+    border: 3px solid #3f7652;
+    border-radius: 10px;
+}
+
+#mi-biografia article h2 {
+    margin-top: 28px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #93c9a0;
+    color: #285f3a;
+}
+
+#mi-biografia article p {
+    margin: 12px 0;
+    color: #333333;
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: justify;
+}
+
+/* Ejemplos usados en Pruebas.html */
+.destacar {
+    background: var(--verde-oscuro);
+    color: var(--blanco);
+    font-weight: bold;
+    text-align: center;
+}
+
+.E-padre {
+    color: #000000;
+    font-size: 24px;
+}
+
+footer {
+    padding: 15px;
+    background: var(--verde-oscuro);
+    color: var(--blanco);
+    text-align: right;
+}
+
+@media (max-width: 700px) {
+    .navMenu {
+        justify-content: flex-start;
+    }
+
+    .pagina-menu #header {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .pagina-menu #header img {
+        width: 140px;
+        height: 140px;
+    }
+
+    .metas-tarjetas {
+        grid-template-columns: 1fr;
+    }
+
+    .calculo-unidades {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .cosmovision-tarjetas,
+    .pasatiempos-lista {
+        grid-template-columns: 1fr;
+    }
+
+    .cosmovision-principal {
+        grid-column: auto;
+    }
+}

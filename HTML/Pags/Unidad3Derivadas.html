@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unidad 3: Cálculo diferencial</title>
+    <link rel="stylesheet" href="../CSS/MIStilo.css">
+</head>
+<body class="pagina-calculo">
+    <nav class="navegacion-principal" aria-label="Navegación principal">
+        <ul class="navMenu">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="menu.html">Menú</a></li>
+            <li><a href="Pasatiempos.html">Pasatiempos</a></li>
+            <li>
+                <a href="ProyectoCalculo.html">Proyecto de cálculo</a>
+                <ul class="submenu">
+                    <li><a href="Unidad1Funciones.html">Unidad 1: Funciones</a></li>
+                    <li><a href="Unidad2Limites.html">Unidad 2: Límites</a></li>
+                    <li><a href="Unidad3Derivadas.html">Unidad 3: Derivadas</a></li>
+                    <li><a href="Unidad4Integrales.html">Unidad 4: Integrales</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Conozcámonos</a>
+                <ul class="submenu">
+                    <li><a href="Autobiografia.html">Autobiografía</a></li>
+                    <li><a href="Cosmovision.html">Cosmovisión</a></li>
+                    <li><a href="Metas.html">Metas</a></li>
+                    <li><a href="contactame.html">Contacto</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Redes</a>
+                <ul class="submenu">
+                    <li><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+                    <li><a href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer">TikTok</a></li>
+                </ul>
+            </li>
+            <li><a href="AcercaDe.html">Acerca de</a></li>
+        </ul>
+    </nav>
+
+    <main class="calculo-contenido calculo-lectura">
+        <header class="calculo-intro">
+            <h1>Unidad 3. Cálculo diferencial: derivadas</h1>
+            <p>Las derivadas miden qué tan rápido cambia una cantidad en un momento determinado.</p>
+        </header>
+
+        <article class="calculo-seccion">
+            <h2>Medir la rapidez con que algo cambia</h2>
+            <p>
+                Después de estudiar las funciones y los límites, el siguiente paso es aprender a
+                medir qué tan rápido cambia algo en un momento determinado. Esto se conoce como
+                cambio instantáneo. En la vida diaria podemos pensar en preguntas como: ¿a qué
+                velocidad va un automóvil justo ahora?, ¿en qué punto una gráfica alcanza su valor
+                más alto?, o ¿cómo cambia el costo cuando se produce una unidad más?
+            </p>
+            <p>
+                Dos matemáticos muy importantes para el desarrollo del cálculo fueron Isaac Newton
+                y Gottfried Wilhelm Leibniz. Newton fue un científico inglés que estudió el
+                movimiento y los cambios. Leibniz fue un matemático alemán que creó una notación
+                para escribir las operaciones del cálculo. Los dos llegaron a ideas importantes
+                durante el siglo XVII y trabajaron de manera independiente. Después hubo una
+                discusión histórica sobre quién había desarrollado primero el cálculo.
+            </p>
+            <p>
+                En nuestra historia, Ethan y Sofía están viendo una carrera de bicicletas. Ethan
+                pregunta cómo se puede saber la velocidad exacta de una bicicleta en un instante.
+                Él sabe que se puede calcular la velocidad promedio de todo el recorrido, pero eso
+                no explica si en un momento específico la bicicleta iba más rápido o más lento.
+                Sofía le explica que para estudiar ese cambio instantáneo se utilizan las derivadas.
+            </p>
+            <p>
+                La derivada de una función mide su razón de cambio instantánea con respecto a una
+                variable. También tiene una interpretación geométrica: representa la pendiente de
+                la recta tangente a la gráfica en un punto. Una recta tangente toca la curva en
+                ese punto y ayuda a conocer cómo se está comportando la función justo ahí.
+            </p>
+            <p>
+                Las derivadas se relacionan con los límites porque su definición utiliza un límite.
+                Por eso es importante haber estudiado el tema anterior. Si una función representa
+                la posición de un objeto conforme pasa el tiempo, su derivada representa la
+                velocidad instantánea. Si volvemos a derivar, podemos obtener la aceleración.
+                Así, una misma función puede darnos información diferente.
+            </p>
+        </article>
+
+        <article class="calculo-seccion">
+            <h2>Reglas básicas y ejemplos de derivación</h2>
+            <p>
+                La derivada se puede escribir de distintas maneras. Una de ellas es f'(x), y otra
+                es dy/dx, que es la notación que se relaciona con Leibniz. La definición se basa
+                en comparar el cambio de la función con un pequeño cambio en la variable y después
+                estudiar qué sucede cuando ese cambio se acerca a cero.
+            </p>
+            <p>
+                Una de las reglas más utilizadas es la regla de la potencia. Dice que si tenemos
+                f(x) = x<sup>n</sup>, su derivada es f'(x) = n x<sup>n-1</sup>. En palabras
+                sencillas, el exponente pasa a multiplicar y después se le resta uno al exponente.
+            </p>
+            <p>
+                Por ejemplo, si f(x) = x³, la derivada es 3x². Si tenemos f(x) = 5x², primero el
+                exponente 2 multiplica al 5 y obtenemos 10; luego al exponente 2 le restamos uno,
+                por eso la derivada queda 10x.
+            </p>
+            <p>
+                También hay otras reglas. La derivada de una constante es cero, porque una cantidad
+                que no cambia tiene una razón de cambio igual a cero. Cuando tenemos una suma,
+                podemos derivar cada término por separado. Además, existen la regla del producto,
+                la regla del cociente y la regla de la cadena, que se usa cuando una función está
+                dentro de otra.
+            </p>
+            <p>
+                Ethan practica con una función que representa la distancia recorrida en cierto
+                modelo: s(t) = t² + 3t. Al derivarla obtiene s'(t) = 2t + 3. Si t representa el
+                tiempo, esta expresión permite calcular la velocidad instantánea en diferentes
+                momentos. Por ejemplo, cuando t = 2, sustituimos y queda 2(2) + 3 = 7. Entonces
+                la velocidad del modelo es 7 unidades por unidad de tiempo.
+            </p>
+            <p>
+                Las derivadas también ayudan a encontrar máximos y mínimos. Cuando la pendiente es
+                cero, puede existir un punto máximo o mínimo. Sin embargo, no basta con ver que la
+                derivada vale cero; también hay que revisar cómo se comporta la función para saber
+                qué tipo de punto es. Esto se utiliza en problemas de optimización, por ejemplo,
+                para aprovechar mejor el material al fabricar una caja.
+            </p>
+        </article>
+
+        <article class="calculo-seccion">
+            <h2>Aplicaciones y reflexión</h2>
+            <p>
+                El cálculo diferencial tiene aplicaciones en muchas áreas. En física se usa para
+                estudiar la velocidad y la aceleración. En economía puede ayudar a analizar costos
+                marginales e ingresos. En ingeniería sirve para mejorar diseños y estudiar cómo
+                responden los sistemas. Las derivadas no resuelven todos los problemas por sí solas,
+                pero dan información que puede ayudar a tomar decisiones.
+            </p>
+            <p>
+                También podemos encontrar ejemplos en situaciones cotidianas. Cuando vemos la
+                velocidad de un automóvil en el tablero, estamos observando una cantidad que cambia
+                con el tiempo. En algunos trabajos de ingeniería se necesita saber cómo responde
+                una pieza cuando se aplica una fuerza o cómo cambia la temperatura de un material.
+                Las derivadas permiten estudiar ese tipo de cambios.
+            </p>
+            <p>
+                Sofía comenta que una derivada se parece a revisar cómo vamos avanzando en una meta.
+                No solamente importa saber dónde estamos, sino también si estamos progresando, si
+                nos estamos deteniendo o si necesitamos cambiar la manera de hacer las cosas. Ethan
+                piensa en sus estudios y en que a veces necesita practicar de otra forma para mejorar.
+            </p>
+            <p>
+                <strong>Reflexión personal de la unidad:</strong> Las derivadas me hicieron pensar
+                en mi familia y en las personas que me ayudan a crecer. Muchas veces no notamos los
+                cambios pequeños, pero después de un tiempo nos damos cuenta de cuánto hemos
+                aprendido gracias a los consejos, el apoyo y hasta las correcciones que nos hacen.
+                También creo que Dios puede ayudarme a mejorar si pongo de mi parte. No siempre
+                avanzamos igual de rápido, pero lo importante es seguir intentando cuando algo
+                nos cuesta.
+            </p>
+            <p>
+                <strong>Conclusión de la unidad:</strong> En esta unidad aprendí que las derivadas
+                sirven para medir cambios instantáneos y para estudiar pendientes, velocidades,
+                máximos y mínimos. También conocí algunas reglas para resolver derivadas y vi que
+                se pueden aplicar en la física, la economía y la ingeniería. Newton y Leibniz
+                fueron figuras muy importantes para el desarrollo de este tema.
+            </p>
+        </article>
+
+        <nav class="calculo-paginacion" aria-label="Navegación entre unidades">
+            <a href="Unidad2Limites.html">Anterior: Límites</a>
+            <a href="ProyectoCalculo.html">Volver al proyecto</a>
+            <a href="Unidad4Integrales.html">Siguiente: Integrales</a>
+        </nav>
+    </main>
+</body>
+</html>
